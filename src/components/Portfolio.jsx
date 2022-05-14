@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/portfolio.css';
 
-import portImg1 from '../assets/portfolio1.svg'
+import portImg1 from '../assets/portfolio1.png'
 import portImg2 from '../assets/portfolio2.png'
 import portImg3 from '../assets/portfolio3.png'
 import portImg4 from '../assets/portfolio4.png'
@@ -13,42 +13,36 @@ const data = [
     id: 1,
     title: 'dev.finance$ - Controle de finanças',
     github: 'https://github.com/Melguis/devfinances',
-    demo: 'https://dribbble.com/shots/18013189-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps',
     image: portImg1
   },
   {
     id: 2,
     title: 'moveit - Contador com exercícios',
     github: 'https://github.com/Melguis/moveit',
-    demo: 'https://dribbble.com/shots/18013196-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps',
     image: portImg2
   },
   {
     id: 3,
     title: 'Feedback - Botão para um enviar email',
     github: 'https://github.com/Melguis',
-    demo: 'https://dribbble.com/shots/17992262-Orion-UI-kit-Charts-templates-infographics-in-Figma',
     image: portImg3
   },
   {
     id: 4,
     title: 'Realtor - Pesquisa de imóveis',
     github: 'https://github.com/Melguis/realtor-jh',
-    demo: 'https://dribbble.com/shots/17992247-Orion-UI-kit-Charts-templates-infographics-in-Figma',
     image: portImg4
   },
   {
     id: 5,
     title: 'Website - Site de receitas com Bootstrap',
     github: 'https://github.com/Melguis/Bootstrap-project',
-    demo: 'https://dribbble.com/shots/17845733-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps',
     image: portImg5
   },
   {
     id: 6,
     title: 'Lista de presença - Armazenando estados em react',
     github: 'https://github.com/Melguis/Reactapp-rs',
-    demo: 'https://dribbble.com/shots/17774094-Orion-UI-kit-Charts-templates-infographics-in-Figma',
     image: portImg6
   },
 ]
@@ -70,8 +64,7 @@ export default function Portfolio() {
                 
                 <h3>{title}</h3>
                 <div className="portfolio__item-cta">
-                  <a href={github} className='btn' target='_blank'>Github</a>
-                  <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a>
+                  <a href={github} className='btn btn-primary' target='_blank'>Github</a>
                 </div>
               </article>
             )
@@ -81,3 +74,5 @@ export default function Portfolio() {
     </section>
   )
 }
+
+// <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a>
