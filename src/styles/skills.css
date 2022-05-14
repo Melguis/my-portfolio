@@ -1,0 +1,107 @@
+.skills__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.skills__container > div {
+    background: var(--color-bg-variant);
+    padding: 4rem 4rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.skills__container > div:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.skills__container > div h2 {
+    text-align: center;
+    margin-top: -2rem;
+    color: var(--color-white);
+}
+
+.skills__card img {
+    width: 5rem;
+    height: 5rem;
+    transform: translate(-50%, -50%);
+    margin-left: 50%;
+    margin-top: 15%;
+}
+
+.skills__card h2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.skills__details-icon {
+    margin-top: 8px;
+    margin-right: 8px;
+    font-size: 1.2rem;
+    color: var(--color-white);
+}
+
+/* =========== MEDIA QUERIES - MEDIUM DEVICES =========== */
+
+@media screen and (max-width: 1024px) {
+    .skills__container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skills__container > div {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+
+    .skills__card img {
+        width: 4rem;
+        height: 4rem;
+        margin-left: 4.5rem;
+        margin-left: 50%;
+        margin-top: 15%;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+}
+
+/* =========== MEDIA QUERIES - SMALL DEVICES =========== */
+
+@media screen and (max-width: 600px) {
+
+    .skills__container {
+        gap: 0rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skills__container > div {
+        width: 80%;
+        height: 80%;
+        padding: 1.5rem 0 4rem 0;
+    }
+
+    .skills__card img {
+        width: 4rem;
+        height: 4rem;
+        margin-left: 2.3rem;
+        margin-left: 50%;
+        margin-top: 20%;
+    }
+
+    .skills__card h2 {
+        font-size: 1rem;
+    }
+
+    .skills__details-icon {
+        margin-top: 4px;
+        margin-right: 6px;
+        font-size: 1rem;
+    }
+}
