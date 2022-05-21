@@ -14,13 +14,13 @@ export default function Nav() {
   const [ activeNav, setActiveNav ] = useState('#')
 
   const changeBackground = () => {
-    if(window.scrollY < 900) {
+    if(window.scrollY < 599) {
       setActiveNav('#')
-    } else if (window.scrollY >= 900 && window.scrollY <= 1799) {
+    } else if (window.scrollY >= 600 && window.scrollY <= 1599) {
       setActiveNav('#about')
-    } else if (window.scrollY >= 1800 && window.scrollY <= 2699) {
+    } else if (window.scrollY >= 1600 && window.scrollY <= 2399) {
       setActiveNav('#skills')
-    } else if (window.scrollY >= 2700 && window.scrollY <= 3699) {
+    } else if (window.scrollY >= 2400 && window.scrollY <= 3699) {
       setActiveNav('#portfolio')
     } else if (window.scrollY >= 3700) {
       setActiveNav('#contact')
