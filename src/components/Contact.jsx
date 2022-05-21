@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
+
 import '../styles/contact.css'
+
 import {MdOutlineEmail} from 'react-icons/md'
 import {BsLinkedin} from 'react-icons/bs'
 import {BsWhatsapp} from 'react-icons/bs'
-import { useRef } from 'react';
+import {AiFillCheckCircle} from 'react-icons/ai'
+import {AiFillExclamationCircle} from 'react-icons/ai'
 
 import emailjs from 'emailjs-com'
 import swal from 'sweetalert';
@@ -61,9 +64,33 @@ export default function Contact() {
           {/* END OF CONTACT OPTIONS */}
 
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name='name' placeholder='Your Full Name' required />
-          <input type="email" name='email' placeholder='Your Email' required/>
-          <textarea type="message" rows="7" placeholder='Your Message' required></textarea>
+          <div className="form-control">
+            <input type="text" name='name' placeholder='Your Full Name' required />
+            <div className="form_img">
+              <AiFillCheckCircle className="img_check" />
+              <AiFillExclamationCircle className="img_error" />
+              <small>Error message</small>
+            </div>
+          </div>
+
+          <div className="form-control">
+            <input type="email" name='email' placeholder='Your Email' required/>
+            <div className="form_img error">
+              <AiFillCheckCircle className="img_check" />
+              <AiFillExclamationCircle className="img_error" />
+              <small>Error message</small>
+            </div>
+          </div>
+
+          <div className="form-control">
+            <textarea type="message" rows="7" placeholder='Your Message' required></textarea>
+            <div className="form_img">
+              <AiFillCheckCircle className="img_check" />
+              <AiFillExclamationCircle className="img_error" />
+              <small>Error message</small>
+            </div>
+          </div>
+
           <button type='submit' className='btn btn-primary'>Send Message</button>
         </form>
       </div>

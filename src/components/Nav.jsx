@@ -11,7 +11,23 @@ import {BiMessageSquareDetail} from 'react-icons/bi'
 
 export default function Nav() {
 
-  const [activeNav, setActiveNav] = useState('#')
+  const [ activeNav, setActiveNav ] = useState('#')
+
+  const changeBackground = () => {
+    if(window.scrollY < 900) {
+      setActiveNav('#')
+    } else if (window.scrollY >= 900 && window.scrollY <= 1799) {
+      setActiveNav('#about')
+    } else if (window.scrollY >= 1800 && window.scrollY <= 2699) {
+      setActiveNav('#skills')
+    } else if (window.scrollY >= 2700 && window.scrollY <= 3699) {
+      setActiveNav('#portfolio')
+    } else if (window.scrollY >= 3700) {
+      setActiveNav('#contact')
+    }
+  }
+
+  window.addEventListener('scroll', changeBackground)
 
   return (
     <nav>
