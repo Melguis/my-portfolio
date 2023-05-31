@@ -20,7 +20,7 @@ export default function Header() {
             <h1>Olá, meu nome é </h1> 
             <h1 className="name">Jorge Henrique</h1>
             <h3 className="text-light">Front-end Developer</h3>
-            <h4>Neste portfolio você irá conhecer um pouco sobre mim e minhas habilidades. Espero que goste!</h4>
+            <h4>Neste portfolio você irá conhecer um pouco sobre mim e minhas habilidades nessa área!</h4>
             <CTA />
           </div>
         </div>
